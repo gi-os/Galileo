@@ -126,8 +126,12 @@ right:0px;
 }
 }
 
- 
+/*----other stuff----*/
 
+ 
+body {
+    background:#f2f2f2 url('body-bg.jpg');
+}
  
 .clearfix:after {
     display:block;
@@ -136,35 +140,34 @@ right:0px;
  
 /*----- Menu Outline -----*/
 .menu-wrap {
-    width:;
-    
-    background:#;
+    width:100px;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+    background:#ffffff;
 }
  
 .menu {
-    width:200px;
+    width:100px;
     margin:0px auto;
 }
  
 .menu li {
     margin:0px;
     list-style:none;
-    font-family:'arial';
-  width:190px;
-  text-decoration:none;
+    font-family:'Ek Mukta';
+  
 }
  
 .menu a {
     transition:all linear 0.15s;
-    color:#969696;
+    color:#919191;
   text-decoration:none;
+    font-family:'Ek Mukta';
   
 }
  
 .menu li:hover > a, .menu .current-item > a {
     text-decoration:none;
-    color:#969696;
-    text-decoration:none;
+    color:#464646;
 }
  
 .menu .arrow {
@@ -178,17 +181,16 @@ right:0px;
     display:inline-block;
     position:relative;
     font-size:19px;
-    text-decoration:none;
 }
  
 .menu > ul > li > a {
     padding:10px 40px;
     display:inline-block;
-    
+    text-shadow:0px 0px 0px rgba(0,0,0,0.4);
 }
  
 .menu > ul > li:hover > a, .menu > ul > .current-item > a {
-    background:#;
+    background:#ffffff;
 }
  
 /*----- Bottom Level -----*/
@@ -199,16 +201,15 @@ right:0px;
  
 .sub-menu {
     width:100%;
-    padding:5px 0px;
+    padding:0px 0px;
     position:absolute;
     top:100%;
     left:0px;
     z-index:-1;
-    opacity:;
+    opacity:0;
     transition:opacity linear 0.15s;
-     rgba(0,0,0,0.2);
-    background:#;
-    text-decoration:none;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:#ffffff;
 }
  
 .sub-menu li {
@@ -219,18 +220,14 @@ right:0px;
 .sub-menu li a {
     padding:10px 30px;
     display:block;
-    text-decoration:none;
 }
  
 .sub-menu li a:hover, .sub-menu .current-item a {
     background:#ffffff;
-    text-decoration:none;
 }
 
 
-
-
-
+/*otherstuff*/
 
 #page {
   -webkit-box-align: center;
