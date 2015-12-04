@@ -21,103 +21,64 @@
          <h1 id='head'>Gi-OS 5 Galileo</h1>
          <p2>Test Out The Revolution</p2>
      </header>
-     <button data-word='Latest Unstable Patch' class="button2" href="dashboard.html"></button>
-<button data-word='Latest Stable Patch' class="button1" href="dashboard.html"></button>
-<style>
-  body {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background: #fff;
-  height: 100vh;
-  width: 100vw;
+
+<button onclick="window.location.href='/dashboard'">Unstable Patch</button>
+
+
+<button onclick="window.location.href='/dashboard'">Stable Patch</button>
+
+  <style>
+    html,body{
+  height:100%;
+}
+body{
+  text-align:center;
+}
+body:before{
+  content:'';
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+button{
+  background:#464646;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#464646;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #464646;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
 }
 
-.button1 {
-  display: inline-block;
-  margin: auto;
-  width: 380px;
-  height: 40px;
-  border: none;
-  background: #464646;
-  position: relative;
-  overflow: hidden;
-}
-.button1:before {
-  content: '';
-  background: #148f77;
-  width: 800px;
-  height: 600px;
-  position: absolute;
-  -webkit-transform: translate(-1000px, -400px) rotate(130deg);
-      -ms-transform: translate(-1000px, -400px) rotate(130deg);
-          transform: translate(-1000px, -400px) rotate(130deg);
-  -webkit-transition: all 700ms ease;
-          transition: all 700ms ease;
-}
-.button1:after {
-  content: attr(data-word);
-  color: white;
-  font-size: 2em;
-  position: relative;
-  z-index: 100;
-  -webkit-transition: all 200ms ease;
-          transition: all 200ms ease;
-  font-weight: 200;
-}
-.button1:hover:after {
-  font-size: 2.2em;
-}
-.button1:hover:before {
-  -webkit-transform: translate(-200px, -400px) rotate(130deg);
-      -ms-transform: translate(-200px, -400px) rotate(130deg);
-          transform: translate(-200px, -400px) rotate(130deg);
-}
-
-.button2 {
-  display: inline-block;
-  margin: auto;
-  width: 380px;
-  height: 40px;
-  border: none;
-  background: #464646;
-  position: relative;
-  overflow: hidden;
-}
-.button2:before {
-  content: '';
-  background: #8f1414;
-  width: 800px;
-  height: 600px;
-  position: absolute;
-  -webkit-transform: translate(-1000px, -400px) rotate(130deg);
-      -ms-transform: translate(-1000px, -400px) rotate(130deg);
-          transform: translate(-1000px, -400px) rotate(130deg);
-  -webkit-transition: all 700ms ease;
-          transition: all 700ms ease;
-}
-.button2:after {
-  content: attr(data-word);
-  color: white;
-  font-size: 2em;
-  position: relative;
-  z-index: 100;
-  -webkit-transition: all 200ms ease;
-          transition: all 200ms ease;
-  font-weight: 200;
-}
-.button2:hover:after {
-  font-size: 2.2em;
-}
-.button2:hover:before {
-  -webkit-transform: translate(-200px, -400px) rotate(130deg);
-      -ms-transform: translate(-200px, -400px) rotate(130deg);
-          transform: translate(-200px, -400px) rotate(130deg);
-}
 
 
 </style>
-
 </center>
       </html>
