@@ -19,16 +19,17 @@
  <body>
      <headerline>
          <h1 id='head'>Gi-OS 5 Galileo</h1>
-         <p2>Test Out The Revolution</p2>
+         
      </header>
+
 
 <button onclick="window.location.href='/dashboard'">Unstable Patch</button>
 
 
 <button onclick="window.location.href='/dashboard'">Stable Patch</button>
 
-  <style>
-    html,body{
+ <style>
+   html,body{
   height:100%;
 }
 body{
@@ -46,6 +47,7 @@ button{
   border:none;
   position:relative;
   height:60px;
+  width:300px;
   font-size:1.6em;
   padding:0 2em;
   cursor:pointer;
@@ -57,14 +59,7 @@ button:hover{
   color:#464646;
 }
 button:before,button:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #464646;
-  transition:400ms ease all;
+
 }
 button:after{
   right:inherit;
@@ -80,5 +75,3 @@ button:hover:before,button:hover:after{
 
 
 </style>
-</center>
-      </html>
