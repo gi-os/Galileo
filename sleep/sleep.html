@@ -1,11 +1,30 @@
+<button onclick="goBack()">Wake</button>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<
 <canvas id='canv'></canvas>
-<a style="font-color:white;" href="dashboard.html" >Sleep</a>
+
+
 <style>
   body{
   width:100%; 
   overflow:hidden;
   margin:0;
 }
+  backbtn{
+  color:white;
+   padding:5px;
+  border: px solid #000;
+  background-color:#000;
+  }
+  body{
+  background-color:#000000;
+  }
+
 </style>
 <script>
   var c = document.getElementById('canv'),
@@ -53,3 +72,4 @@ window.addEventListener('resize', function() {
   c.height = h = window.innerHeight;
 }, false);
 </script>
+
