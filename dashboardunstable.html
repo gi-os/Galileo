@@ -125,7 +125,11 @@ $(document).ready(function(){
   </script>
 </head>
 <body>
-<div id="calculator">
+ 
+<div id="draggablecalc" class="ui-widget-content" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;">
+  <div style="width:228px; background-color:#464646; height:30px; position:relative; left:-9px; top:-10px;">
+   <button id="hidecalc" style="position:relative; left:85px; ">Close</button>
+  </div>
 	<!-- Screen and clear key -->
 	<div class="top">
 		<span class="clear" data-value="C">C</span>
@@ -157,25 +161,21 @@ $(document).ready(function(){
 <!-- PrefixFree -->
 <script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript" type="text/javascript"></script>
 <style>
-  * {
+  .div1{
   box-sizing: border-box;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-size: 4;
+  
+  font-size: 400px;
+
   font-weight: 300;
   margin: 0;
   padding: 0;
 }
-html {
-  height: 100%;
-  background: radial-gradient(circle, #ffffff, #dddddd);
-  background-size: cover;
-}
-#calculator {
-  width: 12em;
-  height: auto;
+
+#draggable {
+  width: 210px;
+  height: 270px;
   background: linear-gradient(#ffffff, #ffffff);
-  margin: 1em auto;
+  
 }
 .top span.clear {
   float: left;
@@ -236,7 +236,7 @@ html {
 </style>
 <script>
   // Get all the keys from document
-var keys = document.querySelectorAll('#calculator span');
+var keys = document.querySelectorAll('#draggable span');
 var operators = ['+', '-', 'x', '÷'];
 var decimalAdded = false;
 
@@ -320,7 +320,10 @@ for(var i = 0; i < keys.length; i++) {
 		e.preventDefault();
 	} 
 }
-</script></body>
+</script>
+ 
+  </div>
+    </body>
 </html>
   
   
@@ -409,4 +412,5 @@ $(document).ready(function(){
 
 </body>
 </html>
+
 
