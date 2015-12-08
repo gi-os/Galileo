@@ -403,18 +403,21 @@ $(document).ready(function(){
     </body>
     
     
+    
+    
+    
     <head>
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    $("#hidewiki").click(function(){
-        $("divwiki").hide();
+    $("#hidenotes").click(function(){
+        $("divnotes").hide();
     });
-    $("#showwiki").click(function(){
-        $("divwiki").show();
+    $("#shownotes").click(function(){
+        $("divnotes").show();
     });
-    $("divwiki").hide();
+    $("divnotes").hide();
 });
 
 </script>
@@ -433,7 +436,7 @@ $(document).ready(function(){
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
   <style>
-  #draggablewiki { width: 450px; height: 200px; padding: 0.5em; }
+  #draggablenotes { width: 450px; height: 200px; padding: 0.5em; }
   </style>
   <script>
   $(function() {
