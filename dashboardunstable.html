@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    <title>Gi-OS 5 .085</title>
+    <title>Gi-OS 5 .086.11</title>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
     <link href="css.css" rel='stylesheet' type='text/css'>
     <script src="js.js" type='text/javascript'></script>
@@ -83,27 +83,10 @@
 <center style="position:relative; left:0px; top:40px;">
 <!-- calc app --><button type="calclaunch" id="showcalc" style="background-image: url( 'http://i.imgur.com/mFQuZyu.png' ); border: none; background-size: 100px 100px; height: 100px; width: 100px; cursor:pointer; transition:800ms ease all;"></button>
 <!-- wiki app --><button id="showwiki"type="wikilaunch" style="background-image: url( 'http://i.imgur.com/tzBBXxG.png' ); border: none; background-size: 100px 100px; height: 100px; width: 100px; cursor:pointer; transition:800ms ease all;"></button>
-<!-- Ai app --><button id="showAi" type="ailaunch" style="background-image: url( 'http://i.imgur.com/Tq4kmnK.png' ); border: none; background-size: 100px 100px; height: 100px; width: 100px; cursor:pointer; transition:800ms ease all;"></button>
+<!-- Ai app --><button id="showai" type="ailaunch" style="background-image: url( 'http://i.imgur.com/Tq4kmnK.png' ); border: none; background-size: 100px 100px; height: 100px; width: 100px; cursor:pointer; transition:800ms ease all;"></button>
 <!-- Note app --><button id="shownotes" type="notelaunch" style="background-image: url( 'http://i.imgur.com/lupUTHR.png' ); border: none; background-size: 100px 100px; height: 100px; width: 100px; cursor:pointer; transition:800ms ease all;"></button>
 </center>
 <style>
-showcalc:hover{
-background-image: url( 'http://i.imgur.com/oKpGpDl.png' ) !important;	
-}
-showcalc:before,button:after{
-
-}
-showcalc:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-showcalc:hover:before,button:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}
-
 </style>
 	<div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -117,7 +100,6 @@ $(document).ready(function(){
     });
     $("divcalc").hide();
 });
-
 </script>
 </head>
 <body>
@@ -188,12 +170,10 @@ $(document).ready(function(){
   box-sizing: border-box;
   
   font-size: 400px;
-
   font-weight: 300;
   margin: 0;
   padding: 0;
 }
-
 #draggablecalc {
   width: 210px;
   height: 270px;
@@ -254,15 +234,12 @@ $(document).ready(function(){
   background: rgba(255, 255, 255, 0.2);
   color: #FFF;
 }
-
-
 </style>
 <script>
   // Get all the keys from document
 var keys = document.querySelectorAll('#draggablecalc span');
 var operators = ['+', '-', 'x', '÷'];
 var decimalAdded = false;
-
 // Add onclick event to all the keys and perform operations
 for(var i = 0; i < keys.length; i++) {
 	keys[i].onclick = function(e) {
@@ -359,6 +336,21 @@ for(var i = 0; i < keys.length; i++) {
 </Center>
 
 
+   <head>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hidenotes").click(function(){
+        $("divnotes").hide();
+    });
+    $("#shownotes").click(function(){
+        $("divnotes").show();
+    });
+    $("divnotes").hide();
+});
+</script>
+</head>
 <body>
 <divnotes>
 </div>
@@ -456,36 +448,6 @@ for(var i = 0; i < keys.length; i++) {
 </html>
 </divnotes>
 </body>
- 
-
- 
-</div>
- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js'></script>
- <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-sanitize.min.js'></script>
- <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.1.2/textAngular.min.js'></script>
-
-</body>
- <style>
-   .ta-editor {
- min-height: 300px;
- height: auto;
- overflow: auto;
- font-family: inherit;
- font-size: 100%;
-}
-
- </style>
-<script>
- 	angular.module("textAngularTest", ['textAngular']);
-function wysiwygeditor($scope) {
-$scope.orightml = '';
-$scope.htmlcontent = $scope.orightml;
-$scope.disabled = false;
-};
-
- </script>
-</html>
-
 
 
 
@@ -502,14 +464,11 @@ $(document).ready(function(){
     });
     $("divwiki").hide();
 });
-
 </script>
 </head>
-</div>
-<divwiki>
 <body>
-
-
+<divwiki>
+</div>
   
  
   
@@ -521,7 +480,7 @@ $(document).ready(function(){
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
   <style>
-  #draggablewiki { width: 450px; height: 40px; padding: 0.5em; }
+  #draggablewiki { width: 450px; height: 400px; padding: 0.5em; }
   </style>
   <script>
   $(function() {
@@ -532,7 +491,7 @@ $(document).ready(function(){
 <body>
  <center>
 <div id="draggablewiki" class="ui-widget-content" style="position:absolute; height:30px; ">
-  <div style="width:468px; background-color:#e5e5e5; height:20px; position:relative; left:-9px; top:-10px;">
+  <div style="width:450px; background-color:#e5e5e5; height:20px; position:relative; left:-9px; top:-10px;">
    <button id="hidewiki" style="background-image: url( 'http://i.imgur.com/CbfnVoU.png' ); border: none; background-size: 35px 20px; height: 20px; width: 35px; float:right;"></button>
 
 
@@ -549,11 +508,12 @@ $(document).ready(function(){
  
   </div>
     </body>
-</html>
-</div>
-</body>
-</html>
-</divwiki>
+    
+    
+    
+    
+    
+ 
 
 
 
@@ -564,7 +524,4 @@ $(document).ready(function(){
 
 </body>
 
-</body>
 </html>
-
-
