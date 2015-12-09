@@ -85,6 +85,19 @@
 <!-- wiki app --><button id="showwiki"type="wikilaunch" style="background-image: url( 'http://i.imgur.com/tzBBXxG.png' ); border: none; background-size: 100px 100px; height: 100px; width: 100px; cursor:pointer; transition:800ms ease all;"></button>
 <!-- Ai app --><button id="showai" type="ailaunch" style="background-image: url( 'http://i.imgur.com/Tq4kmnK.png' ); border: none; background-size: 100px 100px; height: 100px; width: 100px; cursor:pointer; transition:800ms ease all;"></button>
 <!-- Note app --><button id="shownotes" type="notelaunch" style="background-image: url( 'http://i.imgur.com/lupUTHR.png' ); border: none; background-size: 100px 100px; height: 100px; width: 100px; cursor:pointer; transition:800ms ease all;"></button>
+
+<script>
+	$('.appbox').click(function(){
+    var topZ = 0;
+    $('.appbox').each(function(){
+        var thisZ = parseInt($(this).css('z-index'), 10);
+        if (thisZ > topZ){
+            topZ = thisZ;
+        }
+    });
+    $(this).css('z-index', topZ+1);
+});
+</script>
 </center>
 <style>
 </style>
