@@ -87,9 +87,9 @@
 <!-- Note app --><button id="shownotes" type="notelaunch" style="background-image: url( 'http://i.imgur.com/lupUTHR.png' ); border: none; background-size: 100px 100px; height: 100px; width: 100px; cursor:pointer; transition:800ms ease all;"></button>
 
 <script>
-	$('.appbox').click(function(){
+	$('.ui-widget-content').click(function(){
     var topZ = 0;
-    $('.appbox').each(function(){
+    $('.ui-widget-content').each(function(){
         var thisZ = parseInt($(this).css('z-index'), 10);
         if (thisZ > topZ){
             topZ = thisZ;
